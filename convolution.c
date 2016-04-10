@@ -23,7 +23,6 @@ int main(void) {
     printf("%sファイルが開けません\n", input_file_name);
     return 1;
   }
-  input_data_size = 0;
   while( (ret = fscanf( input_file, "%d", input_data+input_data_size)) != EOF
       && input_data_size < MAX_DATA_SIZE) input_data_size++;
   fclose(input_file);
